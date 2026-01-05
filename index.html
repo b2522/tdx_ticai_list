@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -735,6 +736,12 @@
                 
                 const nameCell = row.insertCell(0);
                 nameCell.textContent = stock.name;
+                
+                if (cleanCode.startsWith('3')) {
+                    nameCell.style.color = '#ff9933';
+                } else if (cleanCode.startsWith('68')) {
+                    nameCell.style.color = '#4d90fe';
+                }
                 
                 const boardsCell = row.insertCell(1);
                 boardsCell.textContent = stock.boards || '-';
