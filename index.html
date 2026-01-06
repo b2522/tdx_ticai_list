@@ -755,9 +755,6 @@
                 
                 const priceCell = row.insertCell(2);
                 const changeCell = row.insertCell(3);
-                
-                console.log('Processing stock:', stock.code, 'Clean code:', cleanCode, 'Real-time data:', realTimeData[cleanCode]);
-                
                 if (realTimeData[cleanCode]) {
                     const rtData = realTimeData[cleanCode];
                     priceCell.textContent = rtData.price.toFixed(2);
@@ -832,7 +829,7 @@
                 
                 const priceCell = row.cells[2];
                 const changeCell = row.cells[3];
-                const amountCell = row.cells[4];
+                const amountCell = row.cells[5];
                 
                 if (realTimeData[cleanCode]) {
                     const rtData = realTimeData[cleanCode];
