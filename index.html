@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -113,7 +112,7 @@
         .footer {
             text-align: center;
             margin: 10px 0 3px 0;
-            color: var(--footer-color);
+            color: white;
             font-size: 10px;
         }
         .left-table { 
@@ -279,10 +278,9 @@
         <div class="header-container">
             <div class="date-selector">
                 <input type="date" id="datePicker" placeholder="年/月/日" onchange="onDateChange()">
-                <span style="color: orange;">橙色字体【创业板】</span> <span style="color: rgba(60, 127, 250, 0.781);">蓝色字体【科创板】</span>
             </div>
-            <div style="font-size: 12px; color: #cccccc; margin-left: 10px;">
-                
+            <div style="font-size: 14px; color: #cccccc; margin-left: 10px;">
+               <span style="color: orange;">橙色字体【创业板】</span> <span style="color: rgba(60, 127, 250, 0.781);">蓝色字体【科创板】</span>                
             </div>
             <div class="font-size-control">
                 <button class="font-size-btn" onclick="changeFontSize(-1)">--</button>
@@ -757,9 +755,6 @@
                 
                 const priceCell = row.insertCell(2);
                 const changeCell = row.insertCell(3);
-                
-                console.log('Processing stock:', stock.code, 'Clean code:', cleanCode, 'Real-time data:', realTimeData[cleanCode]);
-                
                 if (realTimeData[cleanCode]) {
                     const rtData = realTimeData[cleanCode];
                     priceCell.textContent = rtData.price.toFixed(2);
@@ -834,7 +829,7 @@
                 
                 const priceCell = row.cells[2];
                 const changeCell = row.cells[3];
-                const amountCell = row.cells[4];
+                const amountCell = row.cells[5];
                 
                 if (realTimeData[cleanCode]) {
                     const rtData = realTimeData[cleanCode];
